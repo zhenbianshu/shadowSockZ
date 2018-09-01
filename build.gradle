@@ -1,0 +1,13 @@
+version '1-0-0-SNAPSHOT'
+group 'shadowSockz'
+
+apply plugin: 'java'
+apply plugin: 'project-report'
+apply plugin: 'maven'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+dependencies {
+}
