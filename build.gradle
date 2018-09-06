@@ -1,13 +1,25 @@
-version '1-0-0-SNAPSHOT'
-group 'shadowSockz'
+allprojects {
+    group 'shadowSockz'
 
-apply plugin: 'java'
-apply plugin: 'project-report'
-apply plugin: 'maven'
-apply plugin: 'groovy'
-apply plugin: 'idea'
+    apply plugin: 'java'
+    apply plugin: 'project-report'
+    apply plugin: 'maven'
+    apply plugin: 'groovy'
+    apply plugin: 'idea'
 
-sourceCompatibility = 1.8
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
-dependencies {
+    version '1.0.0-SNAPSHOT'
+
+    repositories {
+        maven { url 'https://repo.spring.io/libs-milestone' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile 'io.netty:netty-all:5.0.0.Alpha2'
+    }
 }
