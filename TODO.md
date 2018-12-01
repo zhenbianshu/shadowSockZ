@@ -1,6 +1,7 @@
 
 ### ALL
 - use spring-boot
+- use netty
 
 ### client
 -  socks5 protocol
