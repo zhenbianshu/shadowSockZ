@@ -22,5 +22,6 @@ allprojects {
         testCompile group: 'junit', name: 'junit', version: '4.12'
         compile 'io.netty:netty-all:5.0.0.Alpha2'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.3.RELEASE'
+        compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
     }
 }
