@@ -1,9 +1,11 @@
 
 ### ALL
-- 不使用 spring 的情况下部署项目
+- use spring-boot
 
 ### client
-- 捕获代理请求
-- 使用 AES-CFB-256 加密方式
+-  socks5 protocol
+- add crypt method
 
 ### server
+- start a server
+- receive request and parse to verify or connect or transfer object;
