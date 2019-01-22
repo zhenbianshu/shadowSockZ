@@ -1,14 +1,11 @@
-group 'shadowSockz'
+group 'com.zhenbianshu'
 
-version '1.0.0-SNAPSHOT'
 
-apply plugin: 'java'
+jar {
+    baseName = 'client'
 
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
+    manifest {
+        attributes "Manifest-Version": 1.0,
+                'Main-Class': 'com.zhenbianshu.shadowsockz.run.Bootstrap'
+    }
 }

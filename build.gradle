@@ -1,16 +1,22 @@
-allprojects {
-    group 'shadowSockz'
+buildscript {
+    ext {
+        springBootVersion = '1.4.0.RELEASE'
+    }
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
 
+subprojects {
     apply plugin: 'java'
-    apply plugin: 'project-report'
     apply plugin: 'maven'
     apply plugin: 'groovy'
+    apply plugin: 'eclipse'
     apply plugin: 'idea'
-
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
-    version '1.0.0-SNAPSHOT'
 
     repositories {
         maven { url 'https://repo.spring.io/libs-milestone' }
@@ -21,7 +27,32 @@ allprojects {
     dependencies {
         testCompile group: 'junit', name: 'junit', version: '4.12'
         compile 'io.netty:netty-all:5.0.0.Alpha2'
+        compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.0.3.RELEASE'
-        compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
+        compile('org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE')
+        compile('org.codehaus.groovy:groovy-all:2.4.7')
+        compile('org.springframework:spring-context-support:4.3.5.RELEASE')
+        compile('com.sun.mail:javax.mail:1.5.4')
+        compile('com.google.guava:guava:19.0')
+
+        compile('org.apache.logging.log4j:log4j-core:2.8.2')
+        compile('org.apache.logging.log4j:log4j-api:2.8.2')
+        compile('org.apache.logging.log4j:log4j-slf4j-impl:2.8.2')
+
+        compile('mysql:mysql-connector-java:6.0.5')
+        compile('org.springframework:spring-jdbc:4.3.3.RELEASE')
+        testRuntime "cglib:cglib-nodep:3.1"
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+        testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    
+    version = '1.0.0'
+
+    jar {
+        manifest.attributes provider: 'gradle'
     }
 }
