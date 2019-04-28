@@ -1,7 +1,6 @@
 rootProject.name = 'shadowsocks4j'
 
-include 'server'
-include 'client'
-include 'common'
-
+include 'shadowsocks4j-client'
+include 'shadowsocks4j-common'
+include 'shadowsocks4j-server'
 

@@ -1,4 +1,4 @@
-package io.github.zhenbianshu.verify.request;
+package io.github.zhenbianshu.shadowsocks4j.verify.request;
 
 import lombok.Data;
 

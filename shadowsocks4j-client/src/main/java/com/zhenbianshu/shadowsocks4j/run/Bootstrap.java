@@ -1,4 +1,4 @@
-package com.zhenbianshu.shadowsockz.run;
+package com.zhenbianshu.shadowsocks4j.run;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

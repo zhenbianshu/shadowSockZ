@@ -1,0 +1,12 @@
+dependencies {
+    compile(project(':shadowsocks4j-common'))
+}
+
+jar {
+    baseName = 'shadowsocks4j-client'
+
+    manifest {
+        attributes "Manifest-Version": 1.0,
+                'Main-Class': 'com.zhenbianshu.shadowsocks4j.run.Bootstrap'
+    }
+}

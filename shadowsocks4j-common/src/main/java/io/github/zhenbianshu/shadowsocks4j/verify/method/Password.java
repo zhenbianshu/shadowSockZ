@@ -1,6 +1,6 @@
-package io.github.zhenbianshu.verify.method;
+package io.github.zhenbianshu.shadowsocks4j.verify.method;
 
-import io.github.zhenbianshu.verify.request.VerifyContent;
+import io.github.zhenbianshu.shadowsocks4j.verify.request.VerifyContent;
 
 /**
  * created by zhenbianshu on 2018/12/1

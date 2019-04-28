@@ -1,5 +1,3 @@
-group 'shadowSockz'
-
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
@@ -9,5 +7,5 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
+    compile(project(':shadowsocks4j-common'))
 }
