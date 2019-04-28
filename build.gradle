@@ -1,3 +1,5 @@
+group 'io.github.zhenbianshu'
+
 buildscript {
     ext {
         springBootVersion = '1.4.0.RELEASE'

@@ -1,5 +1,8 @@
 group 'com.zhenbianshu'
 
+dependencies {
+    compile(project(':common'))
+}
 
 jar {
     baseName = 'client'
