@@ -1,2 +1,2 @@
-# shadowSockZ
-simple shadowsocks server &amp; client written with java nio frame netty
+# shadowsocks4j
+simple shadowsocks server &amp; client written with netty nio
